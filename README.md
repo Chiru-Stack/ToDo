@@ -1,116 +1,119 @@
 # To-Do List App
 
-The To-Do List App is a feature-rich application built with **Node.js, Express, MongoDB, and the EJS templating engine**, designed to streamline task management.
-
-![todo_app_preview](https://github.com/Chiru-Stack/ToDo/assets/65329366/3e810143-7dbd-46d5-a21d-1bea26a731dc)
+The To-Do List App is an application built on **Node.js, Express, MongoDB, and the EJS templating engine**, with the aim of assisting users in effectively organizing their tasks.
 
 ## Prerequisites
+Before running this project, make sure you have the following installed:
 
-Before running this project, please ensure that you have the following software installed:
+* Node.js: [Download and Install Node.js](https://nodejs.org/en/download "Node.js Download")
 
-- Node.js: [Download and Install Node.js](https://nodejs.org/en/download "Node.js Download")
+* MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community "MongoDB Download")
 
-- MongoDB: [Download and Install MongoDB](https://www.mongodb.com/try/download/community "MongoDB Download")
+## Installation 
 
-## Installation
+Follow these steps to set up the application:
 
-To set up the application, follow these steps:
-
-1. Clone the repository to your local machine using your terminal:
+1. Open Powershell/Terminal and Clone the repository to your local machine:
 
    ```bash
    git clone https://github.com/Chiru-Stack/ToDo.git
+   ```
 
-    Navigate to the project directory:
+2. Navigate to the project directory:
 
-    bash
+   ```bash
+   cd ToDo
+   ```
 
-cd ToDo
+3. Install the required dependencies:
 
-Install the required dependencies:
+   ```bash
+   npm install
+   ```
 
-bash
+4. Install additional packages:
 
-npm install
+   ```bash
+   npm install mongoose lodash
+   ```
 
-Install additional packages:
+## Get Started
 
-bash
+To run the To-Do List App, perform the following actions:
 
-    npm install mongoose lodash
+1. Open a new PowerShell window.
 
-Getting Started
+2. Start the MongoDB:
 
-To run the To-Do List App, follow these instructions:
+   ```bash
+   mongod
+   ```
 
-    Open a new PowerShell window.
+3. Open another PowerShell window.
 
-    Start MongoDB:
+4. Launch the MongoDB shell:
 
-    bash
+   ```bash
+   mongosh
+   ```
 
-mongod
+5. Open another PowerShell window and Navigate to the project directory:
 
-Open another PowerShell window.
+   ```bash
+   cd ToDo
+   ```
 
-Launch the MongoDB shell:
+6. Start the application using nodemon:
 
-bash
+   ```bash
+   nodemon .\app.js
+   ```
 
-mongosh
+7. Open a web browser and navigate to [localhost:3000](http://localhost:3000) to access the application. Use [localhost:3000/work](http://localhost:3000/work) and whatever you want to create new todo list.
 
-Open another PowerShell window and navigate to the project directory:
+## Usage
+* __Home Page (http://localhost:3000):__ This is the default page that shows the "Today" list. 
+You can add new items to the list by typing in the input field and clicking the "+" button.
 
-bash
+* __Custom Lists:__ You can create custom lists by adding a name in the URL (e.g., http://localhost:3000/work). You can then add items to the custom list and access it using the specified name.
 
-cd ToDo
+* __Deleting Items:__ To delete an item, click on the checkbox next to the item. It will be marked as completed and automatically removed from the list.
 
-Start the application using nodemon:
+* __About Page (http://localhost:3000/about):__ This page provides information about the To-Do List application.
 
-bash
-
-    nodemon .\app.js
-
-    Open a web browser and go to localhost:3000 to access the application. You can use localhost:3000/work or any custom path to create new to-do lists.
-
-Usage
-
-    Home Page (http://localhost:3000): The default page displays the "Today" list. You can add new items by typing in the input field and clicking the "+" button.
-
-    Custom Lists: Create custom lists by adding a name to the URL (e.g., http://localhost:3000/work). Add items to custom lists and access them using the specified name.
-
-    Deleting Items: To delete an item, click the checkbox next to it. It will be marked as completed and automatically removed from the list.
-
-    About Page (http://localhost:3000/about): This page provides information about the To-Do List application.
-
-Project Structure
-
+## Project Structure
 The project structure is as follows:
 
-    app.js: The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
+* `app.js:` The main entry point of the application. It configures the server, sets up the routes, and connects to the database.
+   
+   **Models:** "_app.js_" contains the Mongoose models for the database schema.
 
-Models: The "app.js" file contains Mongoose models for the database schema:
+   * `Item:` The model for individual to-do list items.
+   * `List:` The model for the custom lists.
 
-    Item: Model for individual to-do list items.
+* `public:` This directory contains static files such as CSS stylesheets.
+   * `styles.css:` This file contains the CSS stylesheets for the application.
 
-    List: Model for custom lists.
+* `views:` This directory contains the EJS templates used to render the HTML pages.
 
-    public: This directory contains static files such as CSS stylesheets.
-        styles.css: Contains the CSS styles for the application.
+   * `header.ejs:` The header template that is included in other EJS files.
 
-    views: This directory contains EJS templates used to render HTML pages.
-        header.ejs: Header template included in other EJS files.
-        footer.ejs: Footer template included in other EJS files.
-        list.ejs: Template for the to-do list page.
-        about.ejs: Template for the about page.
+   * `footer.ejs:` The footer template that is included in other EJS files.
 
-Acknowledgments
+   * `list.ejs:` The template for the to-do list page.
 
-This project was developed using Node.js, Express, MongoDB, and the EJS templating engine. Special thanks to the authors and contributors of these technologies for their valuable work. Additionally, gratitude is extended to my instructor Angela Yu for her guidance and support during the project's development.
-🚀 About Me
+   * `about.ejs:` The template for the about page.
+---
 
-    Undergraduate Student at Vellore Institute of Technology (Vellore)
 
-Contact Details
 
-    LinkedIn: @chiranjeevikaranki
+---
+## Acknowledgements
+This project was developed utilizing Node.js, Express, MongoDB, and the EJS templating engine. 
+
+We extend our sincere appreciation to the creators and contributors of these technologies for their significant contributions.
+
+Furthermore, I wish to convey my thanks to my instructor, [Angela Yu](https://twitter.com/yu_angela "Twitter"), for her invaluable guidance and unwavering support throughout the project's development.
+
+---
+
