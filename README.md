@@ -117,3 +117,10 @@ Furthermore, I wish to convey my thanks to my instructor, [Angela Yu](https://tw
 
 ---
 
+---
+### Contact Details
+
+* LinkedIn Profile: [Chiranjeevi Karanki](https://www.linkedin.com/in/chiranjeevikaranki/)
+  
+---
+
